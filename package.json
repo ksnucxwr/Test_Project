@@ -1,0 +1,29 @@
+{
+  "name": "electron-auto-update-demo",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.autoupdate",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "ksnucxwr",
+        "repo": "Test_Project"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "6.6.6"
+  },
+  "devDependencies": {
+    "electron": "37.2.0",
+    "electron-builder": "26.0.18"
+  }
+}
